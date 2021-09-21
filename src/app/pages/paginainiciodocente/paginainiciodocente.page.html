@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>paginainiciodocente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="white">
+  <label for=""> Bienvenido Docente </label>
+
+  <ion-button  class="ion-margin-top" type="submit" expand="block" color="light"
+      [routerLink]="['/tabs/generar-qr']">Generar Código QR</ion-button>
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      
+  
+      <ion-tab-button tab="codigo-qr">
+        <ion-icon name="map"></ion-icon>
+        <ion-label>QR</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="about">
+        <ion-icon name="information-circle"></ion-icon>
+        <ion-label>About</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

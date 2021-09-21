@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>generarQR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- estructura para codigo qr-->
+  <ion-card *ngIf="qrData">
+    <ngx-qrcode [elementType]="elementType" [value]="qrData">
+    </ngx-qrcode>
+    <ion-input type="text" placeholder="ingrese codigo QR"
+     [(ngModel)]="qrData"></ion-input>
+  </ion-card>
+
+</ion-content>
+
