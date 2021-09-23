@@ -1,16 +1,19 @@
 <ion-header>
-  <ion-toolbar color="danger">
-    <ion-title>Login Docente</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Sistema de Asistencia</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscrenn]="true" color="white">
 
-  <div class="titulo">Login Docente</div>
+  <div class="titulo">Ingrese Credenciales Docente</div>
 
   <div class="contenido">
     
-     <form [formGroup]="persona"  >
+    <form  [formGroup]="persona" (ngSubmit)="grabar()" >
       <ion-item>
         <ion-label position="floating">Nombre Usuario: </ion-label>
         <ion-input formControlName="elnombreUsuario" ></ion-input>
@@ -19,12 +22,14 @@
         <ion-label position="floating">Contraseña: </ion-label>
         <ion-input formControlName="laContrasena" ></ion-input>
       </ion-item>
-     </form>
+    </form>
   </div>
-  <div class="btndocente">
-    <ion-button (click)="grabar()" class="ion-margin-top" type="submit" expand="block" color="light"
-      [routerLink]="['/paginainiciodocente']">Iniciar Sesión</ion-button>
 
-    <ion-button color="dark" expand="block" fill="outline">Restablecer Contraseña</ion-button>
+  <div class="btndocente">
+    
+    <ion-button (click)="grabar()" class="ion-margin-top" type="submit" expand="block" color="primary"
+      [routerLink]="['/paginainiciodocente']">Acceder</ion-button>
+      <label for="" class="ion-text-center">¿Olvidaste tu contraseña?<ion-router-link href="/restablecer-contrasena" color="medium"> Pincha aquí</ion-router-link></label>
+      
   </div>
 </ion-content>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
+
 @Component({
   selector: 'app-docente',
   templateUrl: './docente.page.html',
@@ -8,7 +9,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class DocentePage implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
   nombreUsuario: String;
   contrasena: String;
@@ -23,6 +24,6 @@ export class DocentePage implements OnInit {
   }
 
   ngOnInit() {
+    
   }
-
 }

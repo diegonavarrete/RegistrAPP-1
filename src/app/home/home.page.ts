@@ -17,6 +17,7 @@ export class HomePage {
   irDocente(){
     this.navControl.navigateForward(['/docente'])
   }
+  
 
 
 }

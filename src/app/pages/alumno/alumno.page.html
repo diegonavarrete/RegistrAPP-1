@@ -1,12 +1,15 @@
 <ion-header>
-  <ion-toolbar color="danger">
-    <ion-title>Login Alumno</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Sistema de Asistencia</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscrenn]="true" color="white">
 
-  <div class="titulo">Login Alumno</div>
+  <div class="titulo">Ingrese Credenciales Alumno</div>
 
   <div class="contenido">
     
@@ -23,11 +26,8 @@
   </div>
 
   <div class="btnalumno">
-    <ion-button (click)="grabar()" class="ion-margin-top" type="submit" expand="block" color="light"
-      [routerLink]="['/paginainicioalumno']">Iniciar Sesión</ion-button>
-
-    <ion-button color="dark" expand="block" fill="outline">Restablecer Contraseña</ion-button>
+    <ion-button (click)="grabar()" class="ion-margin-top" type="submit" expand="block" color="primary"
+      [routerLink]="['/paginainicioalumno']">Acceder</ion-button>
+      <label for="" class="ion-text-center">¿Olvidaste tu contraseña?<ion-router-link href="/restablecer-contrasena"  color="medium"> Pincha aquí</ion-router-link></label>
   </div>
-  <ion-label>Nombre Usuario:{{elnombreUsuario}}</ion-label>
-  
 </ion-content>
